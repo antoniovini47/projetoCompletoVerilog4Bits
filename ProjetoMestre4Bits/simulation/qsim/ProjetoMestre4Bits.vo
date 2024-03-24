@@ -1,0 +1,4461 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
+
+// DATE "03/22/2024 13:18:49"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module ProjetoMestre4Bits (
+	clockPrincipal,
+	visorUnidade,
+	visorDezena,
+	debugSaidaClockLento,
+	debugSaidaFioValorAtual);
+input 	clockPrincipal;
+output 	[3:0] visorUnidade;
+output 	[3:0] visorDezena;
+output 	debugSaidaClockLento;
+output 	[3:0] debugSaidaFioValorAtual;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \visorUnidade[0]~output_o ;
+wire \visorUnidade[1]~output_o ;
+wire \visorUnidade[2]~output_o ;
+wire \visorUnidade[3]~output_o ;
+wire \visorDezena[0]~output_o ;
+wire \visorDezena[1]~output_o ;
+wire \visorDezena[2]~output_o ;
+wire \visorDezena[3]~output_o ;
+wire \debugSaidaClockLento~output_o ;
+wire \debugSaidaFioValorAtual[0]~output_o ;
+wire \debugSaidaFioValorAtual[1]~output_o ;
+wire \debugSaidaFioValorAtual[2]~output_o ;
+wire \debugSaidaFioValorAtual[3]~output_o ;
+wire \clockPrincipal~input_o ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~5_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|contBinario~0_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~6 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~9_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|contBinario~1_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~10 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~125_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~126 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~121_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~122 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~117_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~118 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~113_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~114 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~109_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~110 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~105_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~106 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~101_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~102 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~97_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~98 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~93_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~94 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~89_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~90 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~85_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~86 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~81_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~82 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~77_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~78 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~73_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~74 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~69_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~70 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~65_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~66 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~61_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~62 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~57_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~58 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~53_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~54 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~49_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~50 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~45_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~46 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~41_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~42 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~37_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~38 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~33_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~34 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~29_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~30 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~25_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~26 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~21_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~22 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~17_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~18 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~13_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~14 ;
+wire \etapa3_DecodificadorBinarioParaBCD|Add0~1_sumout ;
+wire \etapa3_DecodificadorBinarioParaBCD|deveCarregar~0_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2_combout ;
+wire \etapa1_DivisorDeFrequencia|Add0~13_sumout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~0_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~1_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~2_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~3_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~4_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~5_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~6_combout ;
+wire \etapa1_DivisorDeFrequencia|LessThan0~7_combout ;
+wire \etapa1_DivisorDeFrequencia|Add0~14 ;
+wire \etapa1_DivisorDeFrequencia|Add0~17_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~18 ;
+wire \etapa1_DivisorDeFrequencia|Add0~9_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~10 ;
+wire \etapa1_DivisorDeFrequencia|Add0~5_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~6 ;
+wire \etapa1_DivisorDeFrequencia|Add0~33_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~34 ;
+wire \etapa1_DivisorDeFrequencia|Add0~29_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~30 ;
+wire \etapa1_DivisorDeFrequencia|Add0~25_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~26 ;
+wire \etapa1_DivisorDeFrequencia|Add0~21_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~22 ;
+wire \etapa1_DivisorDeFrequencia|Add0~89_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~90 ;
+wire \etapa1_DivisorDeFrequencia|Add0~53_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~54 ;
+wire \etapa1_DivisorDeFrequencia|Add0~49_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~50 ;
+wire \etapa1_DivisorDeFrequencia|Add0~45_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~46 ;
+wire \etapa1_DivisorDeFrequencia|Add0~41_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~42 ;
+wire \etapa1_DivisorDeFrequencia|Add0~37_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~38 ;
+wire \etapa1_DivisorDeFrequencia|Add0~65_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~66 ;
+wire \etapa1_DivisorDeFrequencia|Add0~85_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~86 ;
+wire \etapa1_DivisorDeFrequencia|Add0~81_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~82 ;
+wire \etapa1_DivisorDeFrequencia|Add0~77_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~78 ;
+wire \etapa1_DivisorDeFrequencia|Add0~73_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~74 ;
+wire \etapa1_DivisorDeFrequencia|Add0~69_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~70 ;
+wire \etapa1_DivisorDeFrequencia|Add0~61_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~62 ;
+wire \etapa1_DivisorDeFrequencia|Add0~125_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~126 ;
+wire \etapa1_DivisorDeFrequencia|Add0~93_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~94 ;
+wire \etapa1_DivisorDeFrequencia|Add0~121_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~122 ;
+wire \etapa1_DivisorDeFrequencia|Add0~117_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~118 ;
+wire \etapa1_DivisorDeFrequencia|Add0~113_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~114 ;
+wire \etapa1_DivisorDeFrequencia|Add0~109_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~110 ;
+wire \etapa1_DivisorDeFrequencia|Add0~57_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~58 ;
+wire \etapa1_DivisorDeFrequencia|Add0~105_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~106 ;
+wire \etapa1_DivisorDeFrequencia|Add0~101_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~102 ;
+wire \etapa1_DivisorDeFrequencia|Add0~97_sumout ;
+wire \etapa1_DivisorDeFrequencia|Add0~98 ;
+wire \etapa1_DivisorDeFrequencia|Add0~1_sumout ;
+wire \etapa1_DivisorDeFrequencia|clockLento~0_combout ;
+wire \etapa1_DivisorDeFrequencia|clockLento~q ;
+wire \etapa2_Contador4Bits|valorAtual[0]~3_combout ;
+wire \etapa2_Contador4Bits|valorAtual[1]~0_combout ;
+wire \etapa2_Contador4Bits|valorAtual[2]~1_combout ;
+wire \etapa2_Contador4Bits|valorAtual[3]~2_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0_combout ;
+wire \visorUnidade[0]~reg0_q ;
+wire \visorUnidade[1]~reg0_q ;
+wire \visorUnidade[2]~reg0_q ;
+wire \visorUnidade[3]~reg0_q ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsDezena~1_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsDezena~3_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsDezena~4_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsDezena~5_combout ;
+wire \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout ;
+wire \visorDezena[0]~reg0_q ;
+wire \visorDezena[1]~reg0_q ;
+wire \visorDezena[2]~reg0_q ;
+wire \visorDezena[3]~reg0_q ;
+wire \debugSaidaClockLento~reg0_q ;
+wire \debugSaidaFioValorAtual[0]~reg0_q ;
+wire \debugSaidaFioValorAtual[1]~reg0_q ;
+wire \debugSaidaFioValorAtual[2]~reg0_q ;
+wire \debugSaidaFioValorAtual[3]~reg0_q ;
+wire [3:0] \etapa2_Contador4Bits|valorAtual ;
+wire [3:0] \etapa3_DecodificadorBinarioParaBCD|bitsUnidade ;
+wire [31:0] \etapa3_DecodificadorBinarioParaBCD|contBinario ;
+wire [3:0] \etapa3_DecodificadorBinarioParaBCD|bitsDezena ;
+wire [31:0] \etapa1_DivisorDeFrequencia|contador ;
+wire [3:0] \etapa3_DecodificadorBinarioParaBCD|saidaUnidade ;
+wire [3:0] \etapa3_DecodificadorBinarioParaBCD|saidaDezena ;
+wire [31:0] \etapa3_DecodificadorBinarioParaBCD|deveCarregar ;
+
+
+cyclonev_io_obuf \visorUnidade[0]~output (
+	.i(\visorUnidade[0]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorUnidade[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorUnidade[0]~output .bus_hold = "false";
+defparam \visorUnidade[0]~output .open_drain_output = "false";
+defparam \visorUnidade[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorUnidade[1]~output (
+	.i(\visorUnidade[1]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorUnidade[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorUnidade[1]~output .bus_hold = "false";
+defparam \visorUnidade[1]~output .open_drain_output = "false";
+defparam \visorUnidade[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorUnidade[2]~output (
+	.i(\visorUnidade[2]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorUnidade[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorUnidade[2]~output .bus_hold = "false";
+defparam \visorUnidade[2]~output .open_drain_output = "false";
+defparam \visorUnidade[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorUnidade[3]~output (
+	.i(\visorUnidade[3]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorUnidade[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorUnidade[3]~output .bus_hold = "false";
+defparam \visorUnidade[3]~output .open_drain_output = "false";
+defparam \visorUnidade[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorDezena[0]~output (
+	.i(\visorDezena[0]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorDezena[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorDezena[0]~output .bus_hold = "false";
+defparam \visorDezena[0]~output .open_drain_output = "false";
+defparam \visorDezena[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorDezena[1]~output (
+	.i(\visorDezena[1]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorDezena[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorDezena[1]~output .bus_hold = "false";
+defparam \visorDezena[1]~output .open_drain_output = "false";
+defparam \visorDezena[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorDezena[2]~output (
+	.i(\visorDezena[2]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorDezena[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorDezena[2]~output .bus_hold = "false";
+defparam \visorDezena[2]~output .open_drain_output = "false";
+defparam \visorDezena[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \visorDezena[3]~output (
+	.i(\visorDezena[3]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\visorDezena[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \visorDezena[3]~output .bus_hold = "false";
+defparam \visorDezena[3]~output .open_drain_output = "false";
+defparam \visorDezena[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \debugSaidaClockLento~output (
+	.i(\debugSaidaClockLento~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\debugSaidaClockLento~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \debugSaidaClockLento~output .bus_hold = "false";
+defparam \debugSaidaClockLento~output .open_drain_output = "false";
+defparam \debugSaidaClockLento~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \debugSaidaFioValorAtual[0]~output (
+	.i(\debugSaidaFioValorAtual[0]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\debugSaidaFioValorAtual[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[0]~output .bus_hold = "false";
+defparam \debugSaidaFioValorAtual[0]~output .open_drain_output = "false";
+defparam \debugSaidaFioValorAtual[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \debugSaidaFioValorAtual[1]~output (
+	.i(\debugSaidaFioValorAtual[1]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\debugSaidaFioValorAtual[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[1]~output .bus_hold = "false";
+defparam \debugSaidaFioValorAtual[1]~output .open_drain_output = "false";
+defparam \debugSaidaFioValorAtual[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \debugSaidaFioValorAtual[2]~output (
+	.i(\debugSaidaFioValorAtual[2]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\debugSaidaFioValorAtual[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[2]~output .bus_hold = "false";
+defparam \debugSaidaFioValorAtual[2]~output .open_drain_output = "false";
+defparam \debugSaidaFioValorAtual[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \debugSaidaFioValorAtual[3]~output (
+	.i(\debugSaidaFioValorAtual[3]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\debugSaidaFioValorAtual[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[3]~output .bus_hold = "false";
+defparam \debugSaidaFioValorAtual[3]~output .open_drain_output = "false";
+defparam \debugSaidaFioValorAtual[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \clockPrincipal~input (
+	.i(clockPrincipal),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clockPrincipal~input_o ));
+// synopsys translate_off
+defparam \clockPrincipal~input .bus_hold = "false";
+defparam \clockPrincipal~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~5 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~5_sumout  = SUM(( !\etapa3_DecodificadorBinarioParaBCD|contBinario [0] ) + ( VCC ) + ( !VCC ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~6  = CARRY(( !\etapa3_DecodificadorBinarioParaBCD|contBinario [0] ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~5_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~5 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~5 .lut_mask = 64'h000000000000FF00;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~5 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|contBinario~0 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|contBinario~0_combout  = (!\etapa3_DecodificadorBinarioParaBCD|contBinario [31] & !\etapa3_DecodificadorBinarioParaBCD|Add0~5_sumout )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|Add0~5_sumout ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|contBinario~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario~0 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario~0 .lut_mask = 64'h8888888888888888;
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout  = (!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]) # (\etapa3_DecodificadorBinarioParaBCD|contBinario [31])
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0 .lut_mask = 64'hDDDDDDDDDDDDDDDD;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|contBinario~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[0] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[0] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~9 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~9_sumout  = SUM(( !\etapa3_DecodificadorBinarioParaBCD|contBinario [1] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~6  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~10  = CARRY(( !\etapa3_DecodificadorBinarioParaBCD|contBinario [1] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~6  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [1]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~9_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~9 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~9 .lut_mask = 64'h000000000000FF00;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~9 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|contBinario~1 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|contBinario~1_combout  = (!\etapa3_DecodificadorBinarioParaBCD|contBinario [31] & !\etapa3_DecodificadorBinarioParaBCD|Add0~9_sumout )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|Add0~9_sumout ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|contBinario~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario~1 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario~1 .lut_mask = 64'h8888888888888888;
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[1] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|contBinario~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[1] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~125 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~125_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [2] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~10  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~126  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [2] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~10  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [2]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~125_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~126 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~125 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~125 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~125 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[2] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~125_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[2] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~121 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~121_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [3] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~126  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~122  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [3] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~126  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [3]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~126 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~121_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~122 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~121 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~121 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~121 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[3] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~121_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[3] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~117 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~117_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [4] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~122  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~118  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [4] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~122  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [4]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~122 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~117_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~118 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~117 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~117 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~117 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[4] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~117_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[4] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[4] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~113 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~113_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [5] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~118  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~114  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [5] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~118  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [5]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~118 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~113_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~114 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~113 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~113 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~113 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[5] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~113_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[5] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[5] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~109 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~109_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [6] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~114  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~110  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [6] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~114  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [6]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~114 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~109_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~110 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~109 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~109 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~109 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[6] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~109_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[6] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[6] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~105 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~105_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [7] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~110  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~106  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [7] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~110  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [7]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~110 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~105_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~106 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~105 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~105 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~105 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[7] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~105_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[7] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[7] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~101 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~101_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [8] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~106  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~102  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [8] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~106  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [8]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~106 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~101_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~102 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~101 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~101 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~101 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[8] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~101_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[8] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[8] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~97 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~97_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [9] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~102  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~98  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [9] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~102  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [9]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~102 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~97_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~98 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~97 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~97 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~97 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[9] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~97_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[9] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[9] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~93 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~93_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [10] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~98  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~94  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [10] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~98  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [10]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~98 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~93_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~94 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~93 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~93 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~93 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[10] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~93_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[10] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[10] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~89 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~89_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [11] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~94  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~90  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [11] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~94  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [11]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~94 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~89_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~90 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~89 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~89 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~89 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[11] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~89_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[11] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[11] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~85 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~85_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [12] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~90  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~86  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [12] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~90  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [12]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~90 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~85_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~86 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~85 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~85 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~85 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[12] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~85_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[12] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[12] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~81 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~81_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [13] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~86  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~82  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [13] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~86  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [13]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~86 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~81_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~82 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~81 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~81 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~81 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[13] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~81_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[13] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[13] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~77 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~77_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [14] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~82  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~78  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [14] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~82  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [14]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~82 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~77_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~78 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~77 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~77 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~77 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[14] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~77_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[14] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[14] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~73 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~73_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [15] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~78  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~74  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [15] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~78  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [15]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~78 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~73_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~74 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~73 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~73 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~73 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[15] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~73_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[15] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[15] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~69 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~69_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [16] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~74  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~70  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [16] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~74  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [16]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~74 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~69_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~70 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~69 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~69 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~69 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[16] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~69_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [16]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[16] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[16] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~65 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~65_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [17] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~70  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~66  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [17] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~70  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [17]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~70 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~65_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~66 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~65 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~65 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~65 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[17] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~65_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [17]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[17] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[17] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~61 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~61_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [18] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~66  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~62  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [18] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~66  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [18]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~66 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~61_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~62 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~61 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~61 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~61 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[18] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~61_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [18]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[18] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[18] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~57 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~57_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [19] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~62  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~58  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [19] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~62  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [19]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~62 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~57_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~58 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~57 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~57 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~57 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[19] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~57_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [19]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[19] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[19] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~53 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~53_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [20] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~58  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~54  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [20] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~58  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [20]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~58 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~53_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~54 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~53 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~53 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~53 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[20] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~53_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [20]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[20] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[20] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~49 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~49_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [21] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~54  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~50  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [21] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~54  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [21]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~54 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~49_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~50 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~49 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~49 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~49 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[21] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~49_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [21]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[21] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[21] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~45 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~45_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [22] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~50  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~46  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [22] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~50  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [22]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~50 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~45_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~46 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~45 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~45 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~45 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[22] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~45_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [22]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[22] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[22] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~41 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~41_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [23] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~46  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~42  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [23] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~46  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [23]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~46 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~41_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~42 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~41 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~41 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~41 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[23] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~41_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [23]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[23] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[23] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~37 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~37_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [24] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~42  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~38  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [24] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~42  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [24]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~42 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~37_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~38 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~37 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~37 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~37 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[24] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~37_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [24]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[24] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[24] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~33 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~33_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [25] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~38  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~34  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [25] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~38  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [25]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~38 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~33_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~34 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~33 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~33 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~33 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[25] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~33_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [25]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[25] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[25] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~29 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~29_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [26] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~34  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~30  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [26] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~34  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [26]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~34 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~29_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~30 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~29 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~29 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~29 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[26] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~29_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [26]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[26] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[26] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~25 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~25_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [27] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~30  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~26  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [27] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~30  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [27]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~30 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~25_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~26 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~25 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~25 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~25 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[27] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~25_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [27]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[27] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[27] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~21 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~21_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [28] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~26  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~22  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [28] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~26  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [28]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~26 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~21_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~22 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~21 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~21 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~21 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[28] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~21_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [28]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[28] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[28] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~17 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~17_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [29] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~22  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~18  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [29] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~22  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [29]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~22 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~17_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~17 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~17 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~17 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[29] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~17_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [29]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[29] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[29] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~13 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~13_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [30] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~18  ))
+// \etapa3_DecodificadorBinarioParaBCD|Add0~14  = CARRY(( \etapa3_DecodificadorBinarioParaBCD|contBinario [30] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [30]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~13_sumout ),
+	.cout(\etapa3_DecodificadorBinarioParaBCD|Add0~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~13 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~13 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~13 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[30] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~13_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [30]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[30] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[30] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Add0~1 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Add0~1_sumout  = SUM(( \etapa3_DecodificadorBinarioParaBCD|contBinario [31] ) + ( VCC ) + ( \etapa3_DecodificadorBinarioParaBCD|Add0~14  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa3_DecodificadorBinarioParaBCD|Add0~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa3_DecodificadorBinarioParaBCD|Add0~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~1 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~1 .lut_mask = 64'h00000000000000FF;
+defparam \etapa3_DecodificadorBinarioParaBCD|Add0~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|contBinario[31] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|Add0~1_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[31] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|contBinario[31] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|deveCarregar~0 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|deveCarregar~0_combout  = (!\etapa3_DecodificadorBinarioParaBCD|contBinario [31] & !\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0])
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|deveCarregar~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|deveCarregar~0 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|deveCarregar~0 .lut_mask = 64'h8888888888888888;
+defparam \etapa3_DecodificadorBinarioParaBCD|deveCarregar~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|deveCarregar[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|deveCarregar~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|deveCarregar[0] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|deveCarregar[0] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1_combout  = !\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] $ (((!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1])))
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1 .lut_mask = 64'h5959595959595959;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3_combout  = (!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & (((\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1])))) # (\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & 
+// (!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2] $ (((!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] & !\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1])))))
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3 .lut_mask = 64'h3378337833783378;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[2] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[2] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4_combout  = ( \etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( !\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3] $ (((!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]) # 
+// ((!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] & !\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1])))) ) ) # ( !\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( \etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2] ) )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]),
+	.datae(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4 .lut_mask = 64'h0F0F07F80F0F07F8;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[3] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~4_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[3] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2_combout  = ( \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout  ) # ( !\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout  & ( ((\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2] & 
+// ((\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0])))) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]) ) )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]),
+	.datae(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2 .lut_mask = 64'h07FFFFFF07FFFFFF;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~13 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~13_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [0] ) + ( VCC ) + ( !VCC ))
+// \etapa1_DivisorDeFrequencia|Add0~14  = CARRY(( \etapa1_DivisorDeFrequencia|contador [0] ) + ( VCC ) + ( !VCC ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~13_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~14 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~13 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~13 .lut_mask = 64'h00000000000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~13 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~0 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~0_combout  = (\etapa1_DivisorDeFrequencia|contador [7] & (\etapa1_DivisorDeFrequencia|contador [6] & (\etapa1_DivisorDeFrequencia|contador [5] & \etapa1_DivisorDeFrequencia|contador [4])))
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [7]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [6]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [5]),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [4]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~0 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~0 .lut_mask = 64'h0001000100010001;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~1 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~1_combout  = ( \etapa1_DivisorDeFrequencia|LessThan0~0_combout  & ( (\etapa1_DivisorDeFrequencia|contador [3] & (((\etapa1_DivisorDeFrequencia|contador [0] & \etapa1_DivisorDeFrequencia|contador [1])) # 
+// (\etapa1_DivisorDeFrequencia|contador [2]))) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [3]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [2]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [0]),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [1]),
+	.datae(!\etapa1_DivisorDeFrequencia|LessThan0~0_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~1 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~1 .lut_mask = 64'h0000111500001115;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~1 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~2 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~2_combout  = ( !\etapa1_DivisorDeFrequencia|contador [9] & ( (!\etapa1_DivisorDeFrequencia|contador [13] & (!\etapa1_DivisorDeFrequencia|contador [12] & (!\etapa1_DivisorDeFrequencia|contador [11] & 
+// !\etapa1_DivisorDeFrequencia|contador [10]))) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [13]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [12]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [11]),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [10]),
+	.datae(!\etapa1_DivisorDeFrequencia|contador [9]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~2 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~2 .lut_mask = 64'h8000000080000000;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~2 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~3 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~3_combout  = ( !\etapa1_DivisorDeFrequencia|contador [15] & ( (!\etapa1_DivisorDeFrequencia|contador [19] & (!\etapa1_DivisorDeFrequencia|contador [18] & (!\etapa1_DivisorDeFrequencia|contador [17] & 
+// !\etapa1_DivisorDeFrequencia|contador [16]))) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [19]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [18]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [17]),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [16]),
+	.datae(!\etapa1_DivisorDeFrequencia|contador [15]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~3 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~3 .lut_mask = 64'h8000000080000000;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~3 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~4 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~4_combout  = ( !\etapa1_DivisorDeFrequencia|contador [28] & ( (!\etapa1_DivisorDeFrequencia|contador [8] & (!\etapa1_DivisorDeFrequencia|contador [22] & (!\etapa1_DivisorDeFrequencia|contador [30] & 
+// !\etapa1_DivisorDeFrequencia|contador [29]))) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [8]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [22]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [30]),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [29]),
+	.datae(!\etapa1_DivisorDeFrequencia|contador [28]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~4 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~4 .lut_mask = 64'h8000000080000000;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~4 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~5 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~5_combout  = ( !\etapa1_DivisorDeFrequencia|contador [21] & ( (!\etapa1_DivisorDeFrequencia|contador [26] & (!\etapa1_DivisorDeFrequencia|contador [25] & (!\etapa1_DivisorDeFrequencia|contador [24] & 
+// !\etapa1_DivisorDeFrequencia|contador [23]))) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [26]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [25]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [24]),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [23]),
+	.datae(!\etapa1_DivisorDeFrequencia|contador [21]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~5 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~5 .lut_mask = 64'h8000000080000000;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~5 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~6 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~6_combout  = ( \etapa1_DivisorDeFrequencia|LessThan0~4_combout  & ( \etapa1_DivisorDeFrequencia|LessThan0~5_combout  & ( (!\etapa1_DivisorDeFrequencia|contador [27] & (!\etapa1_DivisorDeFrequencia|contador [20] & 
+// (!\etapa1_DivisorDeFrequencia|contador [14] & \etapa1_DivisorDeFrequencia|LessThan0~3_combout ))) ) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [27]),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [20]),
+	.datac(!\etapa1_DivisorDeFrequencia|contador [14]),
+	.datad(!\etapa1_DivisorDeFrequencia|LessThan0~3_combout ),
+	.datae(!\etapa1_DivisorDeFrequencia|LessThan0~4_combout ),
+	.dataf(!\etapa1_DivisorDeFrequencia|LessThan0~5_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~6_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~6 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~6 .lut_mask = 64'h0000000000000080;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~6 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|LessThan0~7 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|LessThan0~7_combout  = (!\etapa1_DivisorDeFrequencia|contador [31] & (((!\etapa1_DivisorDeFrequencia|LessThan0~2_combout ) # (!\etapa1_DivisorDeFrequencia|LessThan0~6_combout )) # 
+// (\etapa1_DivisorDeFrequencia|LessThan0~1_combout )))
+
+	.dataa(!\etapa1_DivisorDeFrequencia|contador [31]),
+	.datab(!\etapa1_DivisorDeFrequencia|LessThan0~1_combout ),
+	.datac(!\etapa1_DivisorDeFrequencia|LessThan0~2_combout ),
+	.datad(!\etapa1_DivisorDeFrequencia|LessThan0~6_combout ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|LessThan0~7 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|LessThan0~7 .lut_mask = 64'hAAA2AAA2AAA2AAA2;
+defparam \etapa1_DivisorDeFrequencia|LessThan0~7 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~13_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[0] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[0] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~17 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~17_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [1] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~14  ))
+// \etapa1_DivisorDeFrequencia|Add0~18  = CARRY(( \etapa1_DivisorDeFrequencia|contador [1] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~14  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [1]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~14 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~17_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~18 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~17 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~17 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~17 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[1] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~17_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[1] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~9 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~9_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [2] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~18  ))
+// \etapa1_DivisorDeFrequencia|Add0~10  = CARRY(( \etapa1_DivisorDeFrequencia|contador [2] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~18  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [2]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~18 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~9_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~10 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~9 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~9 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~9 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[2] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~9_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[2] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~5 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~5_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [3] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~10  ))
+// \etapa1_DivisorDeFrequencia|Add0~6  = CARRY(( \etapa1_DivisorDeFrequencia|contador [3] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~10  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [3]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~10 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~5_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~6 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~5 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~5 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~5 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[3] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~5_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[3] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~33 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~33_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [4] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~6  ))
+// \etapa1_DivisorDeFrequencia|Add0~34  = CARRY(( \etapa1_DivisorDeFrequencia|contador [4] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~6  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [4]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~6 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~33_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~34 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~33 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~33 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~33 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[4] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~33_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [4]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[4] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[4] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~29 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~29_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [5] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~34  ))
+// \etapa1_DivisorDeFrequencia|Add0~30  = CARRY(( \etapa1_DivisorDeFrequencia|contador [5] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~34  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [5]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~34 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~29_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~30 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~29 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~29 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~29 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[5] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~29_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [5]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[5] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[5] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~25 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~25_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [6] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~30  ))
+// \etapa1_DivisorDeFrequencia|Add0~26  = CARRY(( \etapa1_DivisorDeFrequencia|contador [6] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~30  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [6]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~30 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~25_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~26 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~25 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~25 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~25 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[6] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~25_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [6]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[6] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[6] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~21 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~21_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [7] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~26  ))
+// \etapa1_DivisorDeFrequencia|Add0~22  = CARRY(( \etapa1_DivisorDeFrequencia|contador [7] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~26  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [7]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~26 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~21_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~22 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~21 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~21 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~21 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[7] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~21_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [7]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[7] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[7] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~89 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~89_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [8] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~22  ))
+// \etapa1_DivisorDeFrequencia|Add0~90  = CARRY(( \etapa1_DivisorDeFrequencia|contador [8] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~22  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [8]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~22 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~89_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~90 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~89 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~89 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~89 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[8] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~89_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [8]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[8] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[8] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~53 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~53_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [9] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~90  ))
+// \etapa1_DivisorDeFrequencia|Add0~54  = CARRY(( \etapa1_DivisorDeFrequencia|contador [9] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~90  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [9]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~90 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~53_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~54 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~53 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~53 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~53 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[9] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~53_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [9]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[9] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[9] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~49 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~49_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [10] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~54  ))
+// \etapa1_DivisorDeFrequencia|Add0~50  = CARRY(( \etapa1_DivisorDeFrequencia|contador [10] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~54  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [10]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~54 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~49_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~50 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~49 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~49 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~49 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[10] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~49_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [10]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[10] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[10] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~45 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~45_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [11] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~50  ))
+// \etapa1_DivisorDeFrequencia|Add0~46  = CARRY(( \etapa1_DivisorDeFrequencia|contador [11] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~50  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [11]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~50 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~45_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~46 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~45 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~45 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~45 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[11] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~45_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [11]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[11] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[11] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~41 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~41_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [12] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~46  ))
+// \etapa1_DivisorDeFrequencia|Add0~42  = CARRY(( \etapa1_DivisorDeFrequencia|contador [12] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~46  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [12]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~46 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~41_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~42 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~41 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~41 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~41 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[12] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~41_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [12]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[12] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[12] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~37 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~37_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [13] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~42  ))
+// \etapa1_DivisorDeFrequencia|Add0~38  = CARRY(( \etapa1_DivisorDeFrequencia|contador [13] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~42  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [13]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~42 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~37_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~38 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~37 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~37 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~37 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[13] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~37_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [13]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[13] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[13] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~65 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~65_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [14] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~38  ))
+// \etapa1_DivisorDeFrequencia|Add0~66  = CARRY(( \etapa1_DivisorDeFrequencia|contador [14] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~38  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [14]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~38 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~65_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~66 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~65 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~65 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~65 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[14] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~65_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [14]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[14] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[14] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~85 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~85_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [15] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~66  ))
+// \etapa1_DivisorDeFrequencia|Add0~86  = CARRY(( \etapa1_DivisorDeFrequencia|contador [15] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~66  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [15]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~66 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~85_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~86 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~85 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~85 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~85 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[15] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~85_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [15]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[15] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[15] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~81 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~81_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [16] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~86  ))
+// \etapa1_DivisorDeFrequencia|Add0~82  = CARRY(( \etapa1_DivisorDeFrequencia|contador [16] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~86  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [16]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~86 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~81_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~82 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~81 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~81 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~81 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[16] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~81_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [16]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[16] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[16] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~77 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~77_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [17] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~82  ))
+// \etapa1_DivisorDeFrequencia|Add0~78  = CARRY(( \etapa1_DivisorDeFrequencia|contador [17] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~82  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [17]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~82 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~77_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~78 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~77 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~77 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~77 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[17] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~77_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [17]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[17] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[17] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~73 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~73_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [18] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~78  ))
+// \etapa1_DivisorDeFrequencia|Add0~74  = CARRY(( \etapa1_DivisorDeFrequencia|contador [18] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~78  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [18]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~78 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~73_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~74 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~73 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~73 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~73 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[18] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~73_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [18]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[18] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[18] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~69 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~69_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [19] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~74  ))
+// \etapa1_DivisorDeFrequencia|Add0~70  = CARRY(( \etapa1_DivisorDeFrequencia|contador [19] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~74  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [19]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~74 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~69_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~70 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~69 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~69 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~69 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[19] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~69_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [19]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[19] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[19] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~61 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~61_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [20] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~70  ))
+// \etapa1_DivisorDeFrequencia|Add0~62  = CARRY(( \etapa1_DivisorDeFrequencia|contador [20] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~70  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [20]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~70 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~61_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~62 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~61 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~61 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~61 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[20] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~61_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [20]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[20] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[20] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~125 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~125_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [21] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~62  ))
+// \etapa1_DivisorDeFrequencia|Add0~126  = CARRY(( \etapa1_DivisorDeFrequencia|contador [21] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~62  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [21]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~62 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~125_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~126 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~125 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~125 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~125 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[21] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~125_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [21]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[21] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[21] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~93 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~93_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [22] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~126  ))
+// \etapa1_DivisorDeFrequencia|Add0~94  = CARRY(( \etapa1_DivisorDeFrequencia|contador [22] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~126  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [22]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~126 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~93_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~94 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~93 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~93 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~93 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[22] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~93_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [22]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[22] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[22] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~121 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~121_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [23] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~94  ))
+// \etapa1_DivisorDeFrequencia|Add0~122  = CARRY(( \etapa1_DivisorDeFrequencia|contador [23] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~94  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [23]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~94 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~121_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~122 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~121 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~121 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~121 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[23] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~121_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [23]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[23] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[23] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~117 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~117_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [24] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~122  ))
+// \etapa1_DivisorDeFrequencia|Add0~118  = CARRY(( \etapa1_DivisorDeFrequencia|contador [24] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~122  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [24]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~122 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~117_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~118 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~117 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~117 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~117 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[24] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~117_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [24]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[24] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[24] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~113 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~113_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [25] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~118  ))
+// \etapa1_DivisorDeFrequencia|Add0~114  = CARRY(( \etapa1_DivisorDeFrequencia|contador [25] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~118  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [25]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~118 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~113_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~114 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~113 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~113 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~113 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[25] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~113_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [25]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[25] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[25] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~109 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~109_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [26] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~114  ))
+// \etapa1_DivisorDeFrequencia|Add0~110  = CARRY(( \etapa1_DivisorDeFrequencia|contador [26] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~114  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [26]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~114 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~109_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~110 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~109 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~109 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~109 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[26] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~109_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [26]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[26] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[26] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~57 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~57_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [27] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~110  ))
+// \etapa1_DivisorDeFrequencia|Add0~58  = CARRY(( \etapa1_DivisorDeFrequencia|contador [27] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~110  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [27]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~110 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~57_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~58 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~57 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~57 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~57 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[27] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~57_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [27]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[27] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[27] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~105 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~105_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [28] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~58  ))
+// \etapa1_DivisorDeFrequencia|Add0~106  = CARRY(( \etapa1_DivisorDeFrequencia|contador [28] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~58  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [28]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~58 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~105_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~106 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~105 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~105 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~105 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[28] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~105_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [28]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[28] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[28] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~101 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~101_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [29] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~106  ))
+// \etapa1_DivisorDeFrequencia|Add0~102  = CARRY(( \etapa1_DivisorDeFrequencia|contador [29] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~106  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [29]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~106 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~101_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~102 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~101 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~101 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~101 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[29] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~101_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [29]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[29] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[29] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~97 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~97_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [30] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~102  ))
+// \etapa1_DivisorDeFrequencia|Add0~98  = CARRY(( \etapa1_DivisorDeFrequencia|contador [30] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~102  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [30]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~102 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~97_sumout ),
+	.cout(\etapa1_DivisorDeFrequencia|Add0~98 ),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~97 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~97 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~97 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[30] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~97_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [30]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[30] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[30] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|Add0~1 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|Add0~1_sumout  = SUM(( \etapa1_DivisorDeFrequencia|contador [31] ) + ( GND ) + ( \etapa1_DivisorDeFrequencia|Add0~98  ))
+
+	.dataa(gnd),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(!\etapa1_DivisorDeFrequencia|contador [31]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(\etapa1_DivisorDeFrequencia|Add0~98 ),
+	.sharein(gnd),
+	.combout(),
+	.sumout(\etapa1_DivisorDeFrequencia|Add0~1_sumout ),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|Add0~1 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|Add0~1 .lut_mask = 64'h0000FFFF000000FF;
+defparam \etapa1_DivisorDeFrequencia|Add0~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|contador[31] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|Add0~1_sumout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa1_DivisorDeFrequencia|LessThan0~7_combout ),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|contador [31]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|contador[31] .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|contador[31] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa1_DivisorDeFrequencia|clockLento~0 (
+// Equation(s):
+// \etapa1_DivisorDeFrequencia|clockLento~0_combout  = ( \etapa1_DivisorDeFrequencia|LessThan0~6_combout  & ( !\etapa1_DivisorDeFrequencia|clockLento~q  $ ((((!\etapa1_DivisorDeFrequencia|LessThan0~1_combout  & \etapa1_DivisorDeFrequencia|LessThan0~2_combout 
+// )) # (\etapa1_DivisorDeFrequencia|contador [31]))) ) ) # ( !\etapa1_DivisorDeFrequencia|LessThan0~6_combout  & ( !\etapa1_DivisorDeFrequencia|clockLento~q  $ (\etapa1_DivisorDeFrequencia|contador [31]) ) )
+
+	.dataa(!\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.datab(!\etapa1_DivisorDeFrequencia|contador [31]),
+	.datac(!\etapa1_DivisorDeFrequencia|LessThan0~1_combout ),
+	.datad(!\etapa1_DivisorDeFrequencia|LessThan0~2_combout ),
+	.datae(!\etapa1_DivisorDeFrequencia|LessThan0~6_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa1_DivisorDeFrequencia|clockLento~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|clockLento~0 .extended_lut = "off";
+defparam \etapa1_DivisorDeFrequencia|clockLento~0 .lut_mask = 64'h9999995999999959;
+defparam \etapa1_DivisorDeFrequencia|clockLento~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa1_DivisorDeFrequencia|clockLento (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|clockLento~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa1_DivisorDeFrequencia|clockLento .is_wysiwyg = "true";
+defparam \etapa1_DivisorDeFrequencia|clockLento .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa2_Contador4Bits|valorAtual[0]~3 (
+// Equation(s):
+// \etapa2_Contador4Bits|valorAtual[0]~3_combout  = !\etapa2_Contador4Bits|valorAtual [0]
+
+	.dataa(!\etapa2_Contador4Bits|valorAtual [0]),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa2_Contador4Bits|valorAtual[0]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[0]~3 .extended_lut = "off";
+defparam \etapa2_Contador4Bits|valorAtual[0]~3 .lut_mask = 64'hAAAAAAAAAAAAAAAA;
+defparam \etapa2_Contador4Bits|valorAtual[0]~3 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa2_Contador4Bits|valorAtual[0] (
+	.clk(\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.d(\etapa2_Contador4Bits|valorAtual[0]~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa2_Contador4Bits|valorAtual [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[0] .is_wysiwyg = "true";
+defparam \etapa2_Contador4Bits|valorAtual[0] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa2_Contador4Bits|valorAtual[1]~0 (
+// Equation(s):
+// \etapa2_Contador4Bits|valorAtual[1]~0_combout  = !\etapa2_Contador4Bits|valorAtual [0] $ (!\etapa2_Contador4Bits|valorAtual [1])
+
+	.dataa(!\etapa2_Contador4Bits|valorAtual [0]),
+	.datab(!\etapa2_Contador4Bits|valorAtual [1]),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa2_Contador4Bits|valorAtual[1]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[1]~0 .extended_lut = "off";
+defparam \etapa2_Contador4Bits|valorAtual[1]~0 .lut_mask = 64'h6666666666666666;
+defparam \etapa2_Contador4Bits|valorAtual[1]~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa2_Contador4Bits|valorAtual[1] (
+	.clk(\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.d(\etapa2_Contador4Bits|valorAtual[1]~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa2_Contador4Bits|valorAtual [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[1] .is_wysiwyg = "true";
+defparam \etapa2_Contador4Bits|valorAtual[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa2_Contador4Bits|valorAtual[2]~1 (
+// Equation(s):
+// \etapa2_Contador4Bits|valorAtual[2]~1_combout  = !\etapa2_Contador4Bits|valorAtual [2] $ (((!\etapa2_Contador4Bits|valorAtual [0]) # (!\etapa2_Contador4Bits|valorAtual [1])))
+
+	.dataa(!\etapa2_Contador4Bits|valorAtual [0]),
+	.datab(!\etapa2_Contador4Bits|valorAtual [1]),
+	.datac(!\etapa2_Contador4Bits|valorAtual [2]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa2_Contador4Bits|valorAtual[2]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[2]~1 .extended_lut = "off";
+defparam \etapa2_Contador4Bits|valorAtual[2]~1 .lut_mask = 64'h1E1E1E1E1E1E1E1E;
+defparam \etapa2_Contador4Bits|valorAtual[2]~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa2_Contador4Bits|valorAtual[2] (
+	.clk(\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.d(\etapa2_Contador4Bits|valorAtual[2]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa2_Contador4Bits|valorAtual [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[2] .is_wysiwyg = "true";
+defparam \etapa2_Contador4Bits|valorAtual[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa2_Contador4Bits|valorAtual[3]~2 (
+// Equation(s):
+// \etapa2_Contador4Bits|valorAtual[3]~2_combout  = !\etapa2_Contador4Bits|valorAtual [3] $ (((!\etapa2_Contador4Bits|valorAtual [0]) # ((!\etapa2_Contador4Bits|valorAtual [1]) # (!\etapa2_Contador4Bits|valorAtual [2]))))
+
+	.dataa(!\etapa2_Contador4Bits|valorAtual [0]),
+	.datab(!\etapa2_Contador4Bits|valorAtual [1]),
+	.datac(!\etapa2_Contador4Bits|valorAtual [2]),
+	.datad(!\etapa2_Contador4Bits|valorAtual [3]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa2_Contador4Bits|valorAtual[3]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[3]~2 .extended_lut = "off";
+defparam \etapa2_Contador4Bits|valorAtual[3]~2 .lut_mask = 64'h01FE01FE01FE01FE;
+defparam \etapa2_Contador4Bits|valorAtual[3]~2 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa2_Contador4Bits|valorAtual[3] (
+	.clk(\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.d(\etapa2_Contador4Bits|valorAtual[3]~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa2_Contador4Bits|valorAtual [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa2_Contador4Bits|valorAtual[3] .is_wysiwyg = "true";
+defparam \etapa2_Contador4Bits|valorAtual[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|Mux0~0 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout  = ( \etapa3_DecodificadorBinarioParaBCD|contBinario [0] & ( \etapa3_DecodificadorBinarioParaBCD|contBinario [1] & ( \etapa2_Contador4Bits|valorAtual [0] ) ) ) # ( 
+// !\etapa3_DecodificadorBinarioParaBCD|contBinario [0] & ( \etapa3_DecodificadorBinarioParaBCD|contBinario [1] & ( \etapa2_Contador4Bits|valorAtual [1] ) ) ) # ( \etapa3_DecodificadorBinarioParaBCD|contBinario [0] & ( 
+// !\etapa3_DecodificadorBinarioParaBCD|contBinario [1] & ( \etapa2_Contador4Bits|valorAtual [2] ) ) ) # ( !\etapa3_DecodificadorBinarioParaBCD|contBinario [0] & ( !\etapa3_DecodificadorBinarioParaBCD|contBinario [1] & ( \etapa2_Contador4Bits|valorAtual [3] 
+// ) ) )
+
+	.dataa(!\etapa2_Contador4Bits|valorAtual [0]),
+	.datab(!\etapa2_Contador4Bits|valorAtual [1]),
+	.datac(!\etapa2_Contador4Bits|valorAtual [2]),
+	.datad(!\etapa2_Contador4Bits|valorAtual [3]),
+	.datae(!\etapa3_DecodificadorBinarioParaBCD|contBinario [0]),
+	.dataf(!\etapa3_DecodificadorBinarioParaBCD|contBinario [1]),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|Mux0~0 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|Mux0~0 .lut_mask = 64'h00FF0F0F33335555;
+defparam \etapa3_DecodificadorBinarioParaBCD|Mux0~0 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0_combout  = ( \etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( \etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout  & ( (!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] & 
+// (((\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1] & \etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2])) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]))) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] & 
+// (((!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2] & !\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3])))) ) ) ) # ( !\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( \etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout  ) ) # ( 
+// \etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( !\etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout  & ( (!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] & (((\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1] & 
+// \etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2])) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]))) # (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0] & (((!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2] & 
+// !\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3])))) ) ) )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]),
+	.datae(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.dataf(!\etapa3_DecodificadorBinarioParaBCD|Mux0~0_combout ),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0 .lut_mask = 64'h000052AAFFFF52AA;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[0] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsUnidade[0] .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [0]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[0] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[0] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorUnidade[0]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [0]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorUnidade[0]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorUnidade[0]~reg0 .is_wysiwyg = "true";
+defparam \visorUnidade[0]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[1] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [1]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[1] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[1] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorUnidade[1]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [1]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorUnidade[1]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorUnidade[1]~reg0 .is_wysiwyg = "true";
+defparam \visorUnidade[1]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[2] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [2]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[2] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[2] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorUnidade[2]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [2]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorUnidade[2]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorUnidade[2]~reg0 .is_wysiwyg = "true";
+defparam \visorUnidade[2]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[3] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[3] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaUnidade[3] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorUnidade[3]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaUnidade [3]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorUnidade[3]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorUnidade[3]~reg0 .is_wysiwyg = "true";
+defparam \visorUnidade[3]~reg0 .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsDezena~1 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsDezena~1_combout  = (!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & (\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3])) # (\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & 
+// ((!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0])))
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsUnidade [3]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~1 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~1 .lut_mask = 64'h5C5C5C5C5C5C5C5C;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~1 .shared_arith = "off";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsDezena~3 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsDezena~3_combout  = !\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0] $ (((!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]) # (\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1])))
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~3 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~3 .lut_mask = 64'h5959595959595959;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~3 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsDezena[1] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[1] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[1] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsDezena~4 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsDezena~4_combout  = (!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & (((\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1])))) # (\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & 
+// (!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2] $ (((!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0] & !\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1])))))
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~4_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~4 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~4 .lut_mask = 64'h3378337833783378;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~4 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsDezena[2] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~4_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[2] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[2] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsDezena~5 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsDezena~5_combout  = ( \etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( !\etapa3_DecodificadorBinarioParaBCD|bitsDezena [3] $ (((!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2]) # 
+// ((!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0] & !\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1])))) ) ) # ( !\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0] & ( \etapa3_DecodificadorBinarioParaBCD|bitsDezena [2] ) )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [3]),
+	.datae(!\etapa3_DecodificadorBinarioParaBCD|deveCarregar [0]),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~5_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~5 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~5 .lut_mask = 64'h0F0F07F80F0F07F8;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena~5 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsDezena[3] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~5_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[3] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[3] .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2 (
+// Equation(s):
+// \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout  = ( \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout  ) # ( !\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout  & ( ((\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2] & 
+// ((\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]) # (\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0])))) # (\etapa3_DecodificadorBinarioParaBCD|bitsDezena [3]) ) )
+
+	.dataa(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.datab(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]),
+	.datac(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2]),
+	.datad(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena [3]),
+	.datae(!\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~0_combout ),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2 .extended_lut = "off";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2 .lut_mask = 64'h07FFFFFF07FFFFFF;
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|bitsDezena[0]~2_combout ),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|bitsDezena[0] .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaDezena[0] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [0]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [0]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[0] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[0] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorDezena[0]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [0]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorDezena[0]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorDezena[0]~reg0 .is_wysiwyg = "true";
+defparam \visorDezena[0]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaDezena[1] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [1]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [1]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[1] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[1] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorDezena[1]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [1]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorDezena[1]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorDezena[1]~reg0 .is_wysiwyg = "true";
+defparam \visorDezena[1]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaDezena[2] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [2]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [2]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[2] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[2] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorDezena[2]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [2]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorDezena[2]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorDezena[2]~reg0 .is_wysiwyg = "true";
+defparam \visorDezena[2]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \etapa3_DecodificadorBinarioParaBCD|saidaDezena[3] (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|bitsDezena [3]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(\etapa3_DecodificadorBinarioParaBCD|contBinario [31]),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [3]),
+	.prn(vcc));
+// synopsys translate_off
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[3] .is_wysiwyg = "true";
+defparam \etapa3_DecodificadorBinarioParaBCD|saidaDezena[3] .power_up = "low";
+// synopsys translate_on
+
+dffeas \visorDezena[3]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa3_DecodificadorBinarioParaBCD|saidaDezena [3]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\visorDezena[3]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \visorDezena[3]~reg0 .is_wysiwyg = "true";
+defparam \visorDezena[3]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \debugSaidaClockLento~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa1_DivisorDeFrequencia|clockLento~q ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\debugSaidaClockLento~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \debugSaidaClockLento~reg0 .is_wysiwyg = "true";
+defparam \debugSaidaClockLento~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \debugSaidaFioValorAtual[0]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa2_Contador4Bits|valorAtual [0]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\debugSaidaFioValorAtual[0]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[0]~reg0 .is_wysiwyg = "true";
+defparam \debugSaidaFioValorAtual[0]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \debugSaidaFioValorAtual[1]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa2_Contador4Bits|valorAtual [1]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\debugSaidaFioValorAtual[1]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[1]~reg0 .is_wysiwyg = "true";
+defparam \debugSaidaFioValorAtual[1]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \debugSaidaFioValorAtual[2]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa2_Contador4Bits|valorAtual [2]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\debugSaidaFioValorAtual[2]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[2]~reg0 .is_wysiwyg = "true";
+defparam \debugSaidaFioValorAtual[2]~reg0 .power_up = "low";
+// synopsys translate_on
+
+dffeas \debugSaidaFioValorAtual[3]~reg0 (
+	.clk(\clockPrincipal~input_o ),
+	.d(\etapa2_Contador4Bits|valorAtual [3]),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\debugSaidaFioValorAtual[3]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \debugSaidaFioValorAtual[3]~reg0 .is_wysiwyg = "true";
+defparam \debugSaidaFioValorAtual[3]~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign visorUnidade[0] = \visorUnidade[0]~output_o ;
+
+assign visorUnidade[1] = \visorUnidade[1]~output_o ;
+
+assign visorUnidade[2] = \visorUnidade[2]~output_o ;
+
+assign visorUnidade[3] = \visorUnidade[3]~output_o ;
+
+assign visorDezena[0] = \visorDezena[0]~output_o ;
+
+assign visorDezena[1] = \visorDezena[1]~output_o ;
+
+assign visorDezena[2] = \visorDezena[2]~output_o ;
+
+assign visorDezena[3] = \visorDezena[3]~output_o ;
+
+assign debugSaidaClockLento = \debugSaidaClockLento~output_o ;
+
+assign debugSaidaFioValorAtual[0] = \debugSaidaFioValorAtual[0]~output_o ;
+
+assign debugSaidaFioValorAtual[1] = \debugSaidaFioValorAtual[1]~output_o ;
+
+assign debugSaidaFioValorAtual[2] = \debugSaidaFioValorAtual[2]~output_o ;
+
+assign debugSaidaFioValorAtual[3] = \debugSaidaFioValorAtual[3]~output_o ;
+
+endmodule

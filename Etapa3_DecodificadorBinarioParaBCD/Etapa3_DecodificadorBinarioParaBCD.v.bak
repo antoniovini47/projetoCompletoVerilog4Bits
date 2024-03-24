@@ -1,0 +1,33 @@
+module Etapa3_DecodificadorBinarioParaBCD(
+	input[3:0] numBinario,
+	input clock,
+	output reg[3:0] bitsDezena,
+	output reg[3:0] bitsUnidade
+);
+	integer contBinario=3, deveCarregar=1; //deveCarregar serve para alterar entre carregar os bits ou somar +3
+	always @(posedge clock) begin
+		if(contBinario>=0)begin
+			//Carrega 1 bit, e avisa que na próxima a preferencia é checar se C, D ou U estão >= 5
+			if(deveCarregar==1) begin
+				bitsDezena[3]=bitsDezena[2];
+				bitsDezena[2]=bitsDezena[1];
+				bitsDezena[1]=bitsDezena[0];
+				bitsDezena[0]=bitsUnidade[3];
+				bitsUnidade[3]=bitsUnidade[2];
+				bitsUnidade[2]=bitsUnidade[1];
+				bitsUnidade[1]=bitsUnidade[0];
+				bitsUnidade[0]=numBinario[contBinario];
+				contBinario=contBinario-1;
+				deveCarregar=0;
+			end
+			else begin
+				//Checa se C, D ou U tá >=5, se tiver, soma +3, e avisa q na próxima a preferência é carregar
+				if(bitsDezena>=5)
+					 bitsDezena=bitsDezena+3;
+				if(bitsUnidade>=5)
+					bitsUnidade=bitsUnidade+3;
+				deveCarregar=1;
+			end
+		end
+	end
+endmodule

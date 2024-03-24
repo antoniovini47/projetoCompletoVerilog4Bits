@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/SistemasDigitais-ProjetosQartus/ProjetoCompleto/ProjetoCompleto4Bits/Etapa2_Contador4Bits/simulation/qsim
+vEtapa2_Contador4Bits
+Z1 !s110 1711111397
+!i10b 1
+!s100 >`8kN9jOb_RR[OL89@JW_3
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I;mFECo[OYjAYm<:ZX6:4f0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711111396
+8Etapa2_Contador4Bits.vo
+FEtapa2_Contador4Bits.vo
+!i122 0
+L0 32 275
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1711111397.000000
+!s107 Etapa2_Contador4Bits.vo|
+!s90 -work|work|Etapa2_Contador4Bits.vo|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@etapa2_@contador4@bits
+vEtapa2_Contador4Bits_vlg_vec_tst
+R1
+!i10b 1
+!s100 lUN`FCA819<?LVK`:bhMW2
+R2
+IiW[W6^eec8@G1:6hL:J`b3
+R3
+R0
+R4
+8Waveform.vwf.vt
+FWaveform.vwf.vt
+!i122 1
+L0 30 26
+R5
+r1
+!s85 0
+31
+R6
+!s107 Waveform.vwf.vt|
+!s90 -work|work|Waveform.vwf.vt|
+!i113 1
+R7
+R8
+n@etapa2_@contador4@bits_vlg_vec_tst

@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/intelFPGA_lite/SistemasDigitais-ProjetosQartus/ProjetoCompleto/ProjetoCompleto4Bits/Etapa3_DecodificadorBinarioParaBCD/simulation/qsim
+vEtapa3_DecodificadorBinarioParaBCD
+Z1 !s110 1711124193
+!i10b 1
+!s100 ;GFdQR`jE?B^kCYW435N81
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ig4P^e[K;:?o2^DQ=n;<D20
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1711124192
+8Etapa3_DecodificadorBinarioParaBCD.vo
+FEtapa3_DecodificadorBinarioParaBCD.vo
+!i122 88
+L0 32 2466
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1711124193.000000
+!s107 Etapa3_DecodificadorBinarioParaBCD.vo|
+!s90 -work|work|Etapa3_DecodificadorBinarioParaBCD.vo|
+!i113 1
+Z7 o-work work
+Z8 tCvgOpt 0
+n@etapa3_@decodificador@binario@para@b@c@d
+vEtapa3_DecodificadorBinarioParaBCD_vlg_vec_tst
+R1
+!i10b 1
+!s100 2jh0Q]lR2Bn:0EM91_kj>0
+R2
+I2544ga@F?3_JYO37^<<M?2
+R3
+R0
+R4
+8Waveform1.vwf.vt
+FWaveform1.vwf.vt
+!i122 89
+L0 30 60
+R5
+r1
+!s85 0
+31
+R6
+!s107 Waveform1.vwf.vt|
+!s90 -work|work|Waveform1.vwf.vt|
+!i113 1
+R7
+R8
+n@etapa3_@decodificador@binario@para@b@c@d_vlg_vec_tst

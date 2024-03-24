@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "visorUnidade[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visorUnidade[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visorUnidade[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visorUnidade[3]",
+					"strict" : false
+				},
+				{
+					"name" : "visorDezena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "visorDezena[1]",
+					"strict" : false
+				},
+				{
+					"name" : "visorDezena[2]",
+					"strict" : false
+				},
+				{
+					"name" : "visorDezena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "debugSaidaClockLento",
+					"strict" : false
+				},
+				{
+					"name" : "debugSaidaFioValorAtual[0]",
+					"strict" : false
+				},
+				{
+					"name" : "debugSaidaFioValorAtual[1]",
+					"strict" : false
+				},
+				{
+					"name" : "debugSaidaFioValorAtual[2]",
+					"strict" : false
+				},
+				{
+					"name" : "debugSaidaFioValorAtual[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clockPrincipal",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,5 @@
+module ProjetoMestre4Bits(
+	input valorTeste,
+	output[3:0] visorUnidade,
+	output[3:0] visorDezena
+);

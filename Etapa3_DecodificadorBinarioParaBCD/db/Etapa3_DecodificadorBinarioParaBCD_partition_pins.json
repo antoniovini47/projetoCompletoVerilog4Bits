@@ -1,0 +1,93 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "bitsDezena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsDezena[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsDezena[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsDezena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsUnidade[0]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsUnidade[1]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsUnidade[2]",
+					"strict" : false
+				},
+				{
+					"name" : "bitsUnidade[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDezena[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDezena[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDezena[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaDezena[3]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaUnidade[0]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaUnidade[1]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaUnidade[2]",
+					"strict" : false
+				},
+				{
+					"name" : "saidaUnidade[3]",
+					"strict" : false
+				},
+				{
+					"name" : "clock",
+					"strict" : false
+				},
+				{
+					"name" : "numBinario[0]",
+					"strict" : false
+				},
+				{
+					"name" : "numBinario[1]",
+					"strict" : false
+				},
+				{
+					"name" : "numBinario[2]",
+					"strict" : false
+				},
+				{
+					"name" : "numBinario[3]",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,37 @@
+|Etapa1_DivisorDeFrequencia
+clock => clockLento~reg0.CLK
+clock => contador[0].CLK
+clock => contador[1].CLK
+clock => contador[2].CLK
+clock => contador[3].CLK
+clock => contador[4].CLK
+clock => contador[5].CLK
+clock => contador[6].CLK
+clock => contador[7].CLK
+clock => contador[8].CLK
+clock => contador[9].CLK
+clock => contador[10].CLK
+clock => contador[11].CLK
+clock => contador[12].CLK
+clock => contador[13].CLK
+clock => contador[14].CLK
+clock => contador[15].CLK
+clock => contador[16].CLK
+clock => contador[17].CLK
+clock => contador[18].CLK
+clock => contador[19].CLK
+clock => contador[20].CLK
+clock => contador[21].CLK
+clock => contador[22].CLK
+clock => contador[23].CLK
+clock => contador[24].CLK
+clock => contador[25].CLK
+clock => contador[26].CLK
+clock => contador[27].CLK
+clock => contador[28].CLK
+clock => contador[29].CLK
+clock => contador[30].CLK
+clock => contador[31].CLK
+clockLento <= clockLento~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

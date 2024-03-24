@@ -1,0 +1,306 @@
+// Copyright (C) 2023  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// VENDOR "Altera"
+// PROGRAM "Quartus Prime"
+// VERSION "Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition"
+
+// DATE "03/22/2024 09:43:16"
+
+// 
+// Device: Altera 5CGXFC7C7F23C8 Package FBGA484
+// 
+
+// 
+// This Verilog file should be used for Questa Intel FPGA (Verilog) only
+// 
+
+`timescale 1 ps/ 1 ps
+
+module Etapa2_Contador4Bits (
+	clock,
+	valorAtual);
+input 	clock;
+output 	[3:0] valorAtual;
+
+wire gnd;
+wire vcc;
+wire unknown;
+
+assign gnd = 1'b0;
+assign vcc = 1'b1;
+assign unknown = 1'bx;
+
+tri1 devclrn;
+tri1 devpor;
+tri1 devoe;
+wire \valorAtual[0]~output_o ;
+wire \valorAtual[1]~output_o ;
+wire \valorAtual[2]~output_o ;
+wire \valorAtual[3]~output_o ;
+wire \clock~input_o ;
+wire \valorAtual[0]~3_combout ;
+wire \valorAtual[0]~reg0_q ;
+wire \valorAtual[1]~0_combout ;
+wire \valorAtual[1]~reg0_q ;
+wire \valorAtual[2]~1_combout ;
+wire \valorAtual[2]~reg0_q ;
+wire \valorAtual[3]~2_combout ;
+wire \valorAtual[3]~reg0_q ;
+
+
+cyclonev_io_obuf \valorAtual[0]~output (
+	.i(\valorAtual[0]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\valorAtual[0]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \valorAtual[0]~output .bus_hold = "false";
+defparam \valorAtual[0]~output .open_drain_output = "false";
+defparam \valorAtual[0]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \valorAtual[1]~output (
+	.i(\valorAtual[1]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\valorAtual[1]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \valorAtual[1]~output .bus_hold = "false";
+defparam \valorAtual[1]~output .open_drain_output = "false";
+defparam \valorAtual[1]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \valorAtual[2]~output (
+	.i(\valorAtual[2]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\valorAtual[2]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \valorAtual[2]~output .bus_hold = "false";
+defparam \valorAtual[2]~output .open_drain_output = "false";
+defparam \valorAtual[2]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_obuf \valorAtual[3]~output (
+	.i(\valorAtual[3]~reg0_q ),
+	.oe(vcc),
+	.dynamicterminationcontrol(gnd),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.parallelterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\valorAtual[3]~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \valorAtual[3]~output .bus_hold = "false";
+defparam \valorAtual[3]~output .open_drain_output = "false";
+defparam \valorAtual[3]~output .shift_series_termination_control = "false";
+// synopsys translate_on
+
+cyclonev_io_ibuf \clock~input (
+	.i(clock),
+	.ibar(gnd),
+	.dynamicterminationcontrol(gnd),
+	.o(\clock~input_o ));
+// synopsys translate_off
+defparam \clock~input .bus_hold = "false";
+defparam \clock~input .simulate_z_as = "z";
+// synopsys translate_on
+
+cyclonev_lcell_comb \valorAtual[0]~3 (
+// Equation(s):
+// \valorAtual[0]~3_combout  = !\valorAtual[0]~reg0_q 
+
+	.dataa(!\valorAtual[0]~reg0_q ),
+	.datab(gnd),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\valorAtual[0]~3_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \valorAtual[0]~3 .extended_lut = "off";
+defparam \valorAtual[0]~3 .lut_mask = 64'hAAAAAAAAAAAAAAAA;
+defparam \valorAtual[0]~3 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \valorAtual[0]~reg0 (
+	.clk(\clock~input_o ),
+	.d(\valorAtual[0]~3_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\valorAtual[0]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \valorAtual[0]~reg0 .is_wysiwyg = "true";
+defparam \valorAtual[0]~reg0 .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \valorAtual[1]~0 (
+// Equation(s):
+// \valorAtual[1]~0_combout  = !\valorAtual[0]~reg0_q  $ (!\valorAtual[1]~reg0_q )
+
+	.dataa(!\valorAtual[0]~reg0_q ),
+	.datab(!\valorAtual[1]~reg0_q ),
+	.datac(gnd),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\valorAtual[1]~0_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \valorAtual[1]~0 .extended_lut = "off";
+defparam \valorAtual[1]~0 .lut_mask = 64'h6666666666666666;
+defparam \valorAtual[1]~0 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \valorAtual[1]~reg0 (
+	.clk(\clock~input_o ),
+	.d(\valorAtual[1]~0_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\valorAtual[1]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \valorAtual[1]~reg0 .is_wysiwyg = "true";
+defparam \valorAtual[1]~reg0 .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \valorAtual[2]~1 (
+// Equation(s):
+// \valorAtual[2]~1_combout  = !\valorAtual[2]~reg0_q  $ (((!\valorAtual[0]~reg0_q ) # (!\valorAtual[1]~reg0_q )))
+
+	.dataa(!\valorAtual[0]~reg0_q ),
+	.datab(!\valorAtual[1]~reg0_q ),
+	.datac(!\valorAtual[2]~reg0_q ),
+	.datad(gnd),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\valorAtual[2]~1_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \valorAtual[2]~1 .extended_lut = "off";
+defparam \valorAtual[2]~1 .lut_mask = 64'h1E1E1E1E1E1E1E1E;
+defparam \valorAtual[2]~1 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \valorAtual[2]~reg0 (
+	.clk(\clock~input_o ),
+	.d(\valorAtual[2]~1_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\valorAtual[2]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \valorAtual[2]~reg0 .is_wysiwyg = "true";
+defparam \valorAtual[2]~reg0 .power_up = "low";
+// synopsys translate_on
+
+cyclonev_lcell_comb \valorAtual[3]~2 (
+// Equation(s):
+// \valorAtual[3]~2_combout  = !\valorAtual[3]~reg0_q  $ (((!\valorAtual[0]~reg0_q ) # ((!\valorAtual[1]~reg0_q ) # (!\valorAtual[2]~reg0_q ))))
+
+	.dataa(!\valorAtual[0]~reg0_q ),
+	.datab(!\valorAtual[1]~reg0_q ),
+	.datac(!\valorAtual[2]~reg0_q ),
+	.datad(!\valorAtual[3]~reg0_q ),
+	.datae(gnd),
+	.dataf(gnd),
+	.datag(gnd),
+	.cin(gnd),
+	.sharein(gnd),
+	.combout(\valorAtual[3]~2_combout ),
+	.sumout(),
+	.cout(),
+	.shareout());
+// synopsys translate_off
+defparam \valorAtual[3]~2 .extended_lut = "off";
+defparam \valorAtual[3]~2 .lut_mask = 64'h01FE01FE01FE01FE;
+defparam \valorAtual[3]~2 .shared_arith = "off";
+// synopsys translate_on
+
+dffeas \valorAtual[3]~reg0 (
+	.clk(\clock~input_o ),
+	.d(\valorAtual[3]~2_combout ),
+	.asdata(vcc),
+	.clrn(vcc),
+	.aload(gnd),
+	.sclr(gnd),
+	.sload(gnd),
+	.ena(vcc),
+	.devclrn(devclrn),
+	.devpor(devpor),
+	.q(\valorAtual[3]~reg0_q ),
+	.prn(vcc));
+// synopsys translate_off
+defparam \valorAtual[3]~reg0 .is_wysiwyg = "true";
+defparam \valorAtual[3]~reg0 .power_up = "low";
+// synopsys translate_on
+
+assign valorAtual[0] = \valorAtual[0]~output_o ;
+
+assign valorAtual[1] = \valorAtual[1]~output_o ;
+
+assign valorAtual[2] = \valorAtual[2]~output_o ;
+
+assign valorAtual[3] = \valorAtual[3]~output_o ;
+
+endmodule

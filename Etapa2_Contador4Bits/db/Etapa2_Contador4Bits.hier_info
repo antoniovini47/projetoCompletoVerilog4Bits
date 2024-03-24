@@ -1,0 +1,11 @@
+|Etapa2_Contador4Bits
+clock => valorAtual[0]~reg0.CLK
+clock => valorAtual[1]~reg0.CLK
+clock => valorAtual[2]~reg0.CLK
+clock => valorAtual[3]~reg0.CLK
+valorAtual[0] <= valorAtual[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valorAtual[1] <= valorAtual[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valorAtual[2] <= valorAtual[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+valorAtual[3] <= valorAtual[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
